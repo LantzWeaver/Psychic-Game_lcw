@@ -37,5 +37,6 @@ document.onkeyup = function(e) {
 		console.log("Wins:" + Wins + "Losses:" + Losses +"Guesses Left:" + GuessesLeft + "Letters Guessed" + LettersGuessed + "Computer Guess" + ComputerGuess);
 	}
 	
-	
+	var html = "<p><h1>The Psychic Game</h1></p>" + "<p><h4>Guess what letter I'm thinking of</h4</p>" + "<p><h4>Wins: " + Wins + "</h4></p>" + "<p><h4>Losses:" + Losses + "</h4></p>" + "<p><h4>Guesses Left:" + GuessesLeft + "</h4></p>" + "<p><h4>Letters Guessed: " + LettersGuessed + "</h4></p>";
+	document.querySelector("#Game").innerHTML = html;
 }

@@ -17,4 +17,25 @@ document.onkeyup = function(e) {
 	if (LettersGuessed.indexOf(EachGuess) < 0 && Letters.indexOf(EachGuess) >= 0) {
 		LettersGuessed[LettersGuessed.length] = EachGuess; GuessesLeft--;
 	}
+
+
+	if (GuessesLeft === EachGuess) {
+		Wins++;
+		console.log("You have a seer's mind!");
+		GuessesLeft = 9;
+		LettersGuessed = [];
+		ComputerGuess = Letters[Math.floor(Math.random() * Letters.length)]
+		console.log("Wins:" + Wins + "Losses:" + Losses +"Guesses Left:" + GuessesLeft + "Letters Guessed" + LettersGuessed + "Computer Guess" + ComputerGuess);
+	}
+
+	if (GuessesLeft === 0) {
+		Losses++;
+		console.log("You have a seer's mind!");
+		GuessesLeft = 9;
+		LettersGuessed = [];
+		ComputerGuess = Letters[Math.floor(Math.random() * Letters.length)]
+		console.log("Wins:" + Wins + "Losses:" + Losses +"Guesses Left:" + GuessesLeft + "Letters Guessed" + LettersGuessed + "Computer Guess" + ComputerGuess);
+	}
+	
+	
 }

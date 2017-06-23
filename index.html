@@ -7,11 +7,11 @@
     
 		<title>Psychic Game</title>
 
-		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+		<!--<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
 
 		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-theme.min.css">
-		<link  rel="stylesheet" type="text/css" href="assets/css/style.css">
-		<script src="assets/javascript/game.js"></script>
+		<link  rel="stylesheet" type="text/css" href="assets/css/style.css">-->
+		<link rel="javascript" type="text/js" href="assets/javascript/game.js">
 	</head>
 
 <body>
@@ -24,50 +24,6 @@
 	<p>Guesses Left:</p>
 	<br>
 	<p>Letters Guessed:</p>
-	<script type="text/javascript">
-		var Letters = ["a","b", "c", "d", "e", "f", "g", "h",
- "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s",
-  "t", "u", "v", "w", "x", "y", "z"];
-
-var Wins = 0;
-var Losses = 0;
-var GuessesLeft = 9;
-var LettersGuessed = [];
-var EachGuess = null;
-
-var ComputerGuess = Letters[Math.floor(Math.random() * Letters.length)]
-console.log("Wins:" + Wins + "Losses:" + Losses +"Guesses Left:" + GuessesLeft + "Letters Guessed" + LettersGuessed + "Computer Guess" + ComputerGuess);
-
-document.onkeyup = function(e) {
-	var EachGuess = String.fromCharCode(event.keyCode).toUpperCase();
-
-	if (LettersGuessed.indexOf(EachGuess) < 0 && Letters.indexOf(EachGuess) >= 0) {
-		LettersGuessed[LettersGuessed.length] = EachGuess; GuessesLeft--;
-	}
-
-
-	if (GuessesLeft === EachGuess) {
-		Wins++;
-		console.log("You have a seer's mind!");
-		GuessesLeft = 9;
-		LettersGuessed = [];
-		ComputerGuess = Letters[Math.floor(Math.random() * Letters.length)]
-		console.log("Wins:" + Wins + "Losses:" + Losses +"Guesses Left:" + GuessesLeft + "Letters Guessed" + LettersGuessed + "Computer Guess" + ComputerGuess);
-	}
-
-	if (GuessesLeft === 0) {
-		Losses++;
-		console.log("You have a seer's mind!");
-		GuessesLeft = 9;
-		LettersGuessed = [];
-		ComputerGuess = Letters[Math.floor(Math.random() * Letters.length)]
-		console.log("Wins:" + Wins + "Losses:" + Losses +"Guesses Left:" + GuessesLeft + "Letters Guessed" + LettersGuessed + "Computer Guess" + ComputerGuess);
-	}
 	
-	var html = "<p><h1>The Psychic Game</h1></p>" + "<p><h4>Guess what letter I'm thinking of</h4</p>" + "<p><h4>Wins: " + Wins + "</h4></p>" + "<p><h4>Losses:" + Losses + "</h4></p>" + "<p><h4>Guesses Left:" + GuessesLeft + "</h4></p>" + "<p><h4>Letters Guessed: " + LettersGuessed + "</h4></p>";
-	document.querySelector("#Game").innerHTML = html;
-}
-	</script>
-
 </body>
 </html>		
